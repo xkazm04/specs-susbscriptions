@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "type": "divider",
+      "title": "Webhooks"
+    },
+    {
+      "type": "divider",
+      "title": "APIS"
+    },
+    {
+      "type": "item",
+      "title": "Alerts",
+      "uri": "/reference/Alerts.yaml"
+    }
+  ]
+}
