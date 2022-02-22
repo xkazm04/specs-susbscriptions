@@ -191,7 +191,7 @@ paths:
           {
             "txId": "0x026f4f05b972c09279111da13dfd20d8df04eff436d7f604cd97b9ffaa690567",
             "reference": "90270634-5b07-4fad-b17b-f82899953533",
-            "accountId": "6086ed0744c45b24d4fbd039",
+            "accountId": "6082ab462936b4478117c6a0",
             "currency": "BSC",
             "withdrawalId": "608fe5b73a893234ba379ab2",
             "address": "0x8ce4e40889a13971681391AAd29E88eFAF91f784",
