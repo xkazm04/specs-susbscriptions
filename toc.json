@@ -2,10 +2,6 @@
   "items": [
     {
       "type": "divider",
-      "title": "Webhooks"
-    },
-    {
-      "type": "divider",
       "title": "APIS"
     },
     {
