@@ -44,6 +44,13 @@ paths:
             <td>50 credits / day / address</td>
           </tr>
           <tr>
+            <td>Terra Luna</td>
+            <td>Yes/Yes</td>
+            <td>LUNA, KRW, USD and all other assets</td>
+            <td>Free plans - 10 addresses across all blockchains, Paid plans - unlimited addresses across all blockchains</td>
+            <td>30 credits / day / address</td>
+          </tr>
+          <tr>
             <td>Ethereum</td>
             <td>Yes/Yes</td>
             <td>ETH, Internal transfers, ERC20, ERC721, ERC1155</td>
@@ -272,6 +279,8 @@ paths:
                             - DOGE
                             - ETH
                             - MATIC
+                            - KLAY
+                            - LUNA
                             - CELO
                             - BCH
                         url:
