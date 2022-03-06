@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "type": "item",
+      "title": "Service overview",
+      "uri": "/docs/subscriptions.md"
+    },
+    {
       "type": "divider",
       "title": "APIS"
     },
