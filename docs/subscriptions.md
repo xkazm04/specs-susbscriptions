@@ -5,24 +5,17 @@
 
 ## Subscription types
 
-Column A | Column B | Column C
+Subscription type | Description | Credit cost
 -----|----------|---------
  ADDRESS_TRANSACTION | Enable HTTP POST JSON notifications for any blockchain transactions at the specified address. | 5 credits / fired webhook
  ACCOUNT_INCOMING_BLOCKCHAIN_TRANSACTION | Enable HTTP POST JSON notifications on incoming blockchain transactions on virtual accounts. | 1 credit / monitored day
  ACCOUNT_PENDING_BLOCKCHAIN_TRANSACTION |   Enable HTTP POST JSON notifications on incoming blockchain transactions on virtual accounts. | | 1 credit / monitored day
-
-
  CUSTOMER_TRADE_MATCH| Enable HTTP POST JSON notifications on closed trade, which occurs on any customer account. | 10 credit / monitored day
-  CUSTOMER_PARTIAL_TRADE_MATCH| Enable HTTP POST JSON notifications on partialy filled trade, which occurs on any customer account. | 10 credit / monitored day
+CUSTOMER_PARTIAL_TRADE_MATCH| Enable HTTP POST JSON notifications on partialy filled trade, which occurs on any customer account. | 10 credit / monitored day
 TRANSACTION_IN_THE_BLOCK | Enable HTTP POST JSON notifications on ledger => blockchain transaction, when transaction is included in the block. | 10 credits daily + 1 per notification
-
 ACCOUNT_BALANCE_LIMIT | Report with all account balances above desired limit.
-
 TRANSACTION_HISTORY_REPORT | Report with all ledger transactions for last X hours, where X is set by the subscription attribute as interval.
-
-
 KMS_FAILED_TX | Enable HTTP POST JSON notifications on error during KMS signature process.| 10 credits daily
-
 OFFCHAIN_WITHDRAWAL| Off-chain scanning of outgoing transactions for BTC, BCH, LTC, DOGE and ETH blockchains | 20 credits / address
 
 ### 1. ADDRESS_TRANSACTION
@@ -32,8 +25,8 @@ Free community plans can monitor up to 10 addresses per plan.
 Please refer to the availability and consumption table below.
 
 #### Pricing & limitation
-**Free plans** - 10 addresses across all blockchains
-**Paid plans** - unlimited addresses across all blockchains
+- **Free plans** - 10 addresses across all blockchains
+- **Paid plans** - unlimited addresses across all blockchains
 
 
 Blockchain | Asset support | Credit consumption
@@ -208,7 +201,7 @@ Report with all account balances above desired limit.
 ### 9. TRANSACTION_HISTORY_REPORT
 Report with all ledger transactions for last X hours, where X is set by the subscription attribute as interval.
 
-Maximum number of transactions returned by this report is 20000. Transactions are obtained from the time of the invocation of the GET method to obtain report - X hours.
+Maximum number of transactions returned by this report is 20000. Transactions are obtained from the time of the invocation of the `GET` method to obtain report - X hours.
 
 In case of unsuccesful web hook response status - other then 2xx - web hook is repeated 9 more times with exponential backoff.
 
