@@ -1,11 +1,12 @@
-# Subscription-overview
+# Subscriptions & Alerts
+Endpoints to handle subscriptions to the Tatum Platform. Subscriptions allow users to enable some additional features or reports that are not enabled by default, like outgoing off-chain transaction scanning, accounts with balances above the limit, etc.
 
 ## Pricing
 2 credits for API call. Every type of subscription has different credit pricing.
 
 ## Subscription types
 
-Subscription type | Description | Credit cost
+Subscription type | Description | Additional credit cost
 -----|----------|---------
  ADDRESS_TRANSACTION | Enable HTTP POST JSON notifications for any blockchain transactions at the specified address. | 5 credits / fired webhook
  ACCOUNT_INCOMING_BLOCKCHAIN_TRANSACTION | Enable HTTP POST JSON notifications on incoming blockchain transactions on virtual accounts. | 1 credit / monitored day
