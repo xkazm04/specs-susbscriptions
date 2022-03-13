@@ -244,6 +244,7 @@ paths:
             schema:
               oneOf:
                 - type: object
+                  title: ADDRESS_TRANSACTION
                   required:
                     - type
                     - attr
@@ -289,6 +290,7 @@ paths:
                           example: 'https://webhook.tatum.io/account'
                           maxLength: 500
                 - type: object
+                  title: ACCOUNT_INCOMING_BLOCKCHAIN_TRANSACTION
                   required:
                     - type
                     - attr
@@ -318,6 +320,7 @@ paths:
                           example: 'https://webhook.tatum.io/account'
                           maxLength: 500
                 - type: object
+                  title: ACCOUNT_PENDING_BLOCKCHAIN_TRANSACTION
                   required:
                     - type
                     - attr
@@ -347,6 +350,7 @@ paths:
                           example: 'https://webhook.tatum.io/account'
                           maxLength: 500
                 - type: object
+                  title: CUSTOMER_TRADE_MATCH
                   required:
                     - type
                     - attr
@@ -376,6 +380,7 @@ paths:
                           example: 'https://webhook.tatum.io/trade'
                           maxLength: 500
                 - type: object
+                  title: KMS_FAILED_TX
                   required:
                     - type
                     - attr
@@ -398,6 +403,7 @@ paths:
                           example: 'https://webhook.tatum.io/kms'
                           maxLength: 500
                 - type: object
+                  title: KMS_COMPLETED_TX
                   required:
                     - type
                     - attr
@@ -420,6 +426,7 @@ paths:
                           example: 'https://webhook.tatum.io/kms'
                           maxLength: 500
                 - type: object
+                  title: TRANSACTION_IN_THE_BLOCK
                   required:
                     - type
                     - attr
@@ -442,6 +449,7 @@ paths:
                           example: 'https://webhook.tatum.io/outgoing-tx'
                           maxLength: 500
                 - type: object
+                  title: OFFCHAIN_WITHDRAWAL
                   required:
                     - type
                     - attr
@@ -466,6 +474,7 @@ paths:
                           maxLength: 30
                           pattern: '^BTC|ADA|LTC|DOGE|ONE|XDC|FLOW|FUSD|BSC|ADA|BETH|BUSD|BUSD_BSC|CAKE|BBTC|BADA|WBNB|BDOT|BXRP|BLTC|BBCH|BCH|ETH|USDT|WBTC|LEO|LINK|GMC|GMC_BSC|RMD|UNI|FREE|MKR|USDC|BAT|TUSD|PAX|PAXG|PLTC|XCON|MMY|EGLD|[a-zA-Z0-9_]+$'
                 - type: object
+                  title: ACCOUNT_BALANCE_LIMIT
                   required:
                     - type
                     - attr
@@ -496,6 +505,7 @@ paths:
                             - account
                             - available
                 - type: object
+                  title: TRANSACTION_HISTORY_REPORT
                   required:
                     - type
                     - attr
@@ -1300,6 +1310,7 @@ paths:
                         - balance
                       type: object
                     type: array
+                    title: Account
                   - items:
                       properties:
                         accountId:
@@ -1622,6 +1633,7 @@ paths:
                         - transactionType
                         - currency
                     type: array
+                    title: Transaction
           description: OK
         '400':
           content:
