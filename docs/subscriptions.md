@@ -41,6 +41,7 @@ Blockchain | Asset support | Credit consumption
 **Litecoin** | LTC | 20 credits / day / address
 **Polygon** | MATIC, ERC20, ERC721, ERC1155 | 40 credits / day / address
 **Solana** | SOL, SLP and NFTs | 50 credits / day / address
+**Tron** | Tron, TRC10/TRC20 | 30 credits / day / address
 **Terra Luna** | LUNA, KRW, USD and all other assets | 30 credits / day / address
 
 
