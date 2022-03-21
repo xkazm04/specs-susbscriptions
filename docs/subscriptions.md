@@ -1,5 +1,5 @@
 # Subscriptions & Alerts
-Endpoints to handle subscriptions to the Tatum Platform. Subscriptions allow users to enable some additional features or reports that are not enabled by default, like outgoing off-chain transaction scanning, accounts with balances above the limit, etc.
+Endpoints to handle [subscriptions](https://docs.tatum.io/rest/subscriptions/create-new-subscription) to the Tatum Platform. Subscriptions allow users to enable some additional features or reports that are not enabled by default, like outgoing off-chain transaction scanning, accounts with balances above the limit, etc.
 
 ## Pricing
 2 credits for API call. Every type of subscription has different credit pricing.
