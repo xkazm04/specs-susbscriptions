@@ -37,6 +37,13 @@ paths:
             <th>Credit consumption / day / address</th>
           </tr>
           <tr>
+            <td>Binance Smart Chain</td>
+            <td>Yes/Yes</td>
+            <td>BSC, BEP20, ERC721, ERC1155</td>
+            <td>Free plans - 10 addresses across all blockchains, Paid plans - unlimited addresses across all blockchains</td>
+            <td>40 credits / day / address</td>
+          </tr>
+          <tr>
             <td>Solana</td>
             <td>Yes/Yes</td>
             <td>SOL, SLP and NFTs</td>
@@ -282,6 +289,7 @@ paths:
                           type: string
                           enum:
                             - SOL
+                            - BSC
                             - BTC
                             - LTC
                             - DOGE
