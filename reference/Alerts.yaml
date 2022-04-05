@@ -122,7 +122,7 @@ paths:
           </tr>
         </table>
         Request body of the POST request will be JSON object with attributes:<br/>
-        <code>{
+        <pre><code>{
           "address": "FykfMwA9WNShzPJbbb9DNXsfgDgS3XZzWiFgrVXfWoPJ", // address on which the transaction occurs. For EVM chains, this is recipient address
           "txId": "2rdy3YCZHSwvpWtuDom1d4Jjy5UU9STLxF3ffXau6GToReDkfw8wEgX541fvzvh6btVC5D8iNapcKTXfPsoDBk7A", // transaction id
           "blockNumber": 110827114, // block number
@@ -131,7 +131,7 @@ paths:
           "tokenId": "1", // ID of the transferred token, if it is ERC721 / ERC1155
           "type": "token", // type of transaction, could be 'native' or 'token'
           "counterAddress": undefined // optional counter party address of the transaction. For EVM chains, this is recipient address
-        }</code>
+        }</code></pre>
         5 credits will be debited for every fired webhook.<br/></li>
         <li><b>ACCOUNT_INCOMING_BLOCKCHAIN_TRANSACTION</b> - Enable HTTP POST JSON notifications on incoming blockchain transactions on virtual accounts.
         This web hook will be invoked, when the transaction is credited to the virtual account. Transaction is credited, when it has sufficient amount of blockchain confirmations.
@@ -155,7 +155,7 @@ paths:
         This web hook will be invoked, when the transaction appears for the first time in the block - it has 1 confirmation, but is still not credited to the ledger account, because it does not have enough confirmations.
         This web hook is invoked only for BTC, LTC, DOGE and BCH accounts.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <pre><code>{
           "date": 1619176527481,
           "amount": "0.005",
           "currency": "BTC",
@@ -167,12 +167,12 @@ paths:
           "from": "SENDER_ADDRESS", // might not ebe present all the time, for UTXO based blockchains it's not there
           "to": "RECIPIENT_ADDRESS_CONNECTED_TO_LEDGER_ACCOUNT", // blockchain address of the recipient
           "index": 5 // for UTXO based chains (BTC,LTC,DOGE,BCH,ADA) this is the index of the output in the transaction
-        }</pre>
+        }</code></pre>
         1 credit will be debited for every monitored account every day.</li>
         <li><b>CUSTOMER_TRADE_MATCH</b> - Enable HTTP POST JSON notifications on closed trade, which occurs on any customer account.
         This web hook will be invoked, when the open trade is filled and closed. Works also for the Trade Futures. If is triggered by the futures, bool field expiredWithoutMatch is present.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <pre><code>{
           "created": 1619176527481,
           "amount": "0.005",
           "price": "0.02",
@@ -185,12 +185,12 @@ paths:
           "feeAccountId": null,
           "isMaker": true,
           "expiredWithoutMatch": false
-        }</pre>
+        }</code></pre>
         10 credits will be debited for every monitored customer every day.</li>
         <li><b>CUSTOMER_PARTIAL_TRADE_MATCH</b> - Enable HTTP POST JSON notifications on partialy filled trade, which occurs on any customer account.
         This web hook will be invoked, when the open trade is partialy filled.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <pre><code>{
           "created": 1619176527481,
           "amount": "0.005",
           "price": "0.02",
@@ -203,12 +203,12 @@ paths:
           "feeAccountId": null,
           "isMaker": true,
           "expiredWithoutMatch": false
-        }</pre>
+        }</code></pre>
         10 credits will be debited for every monitored customer every day.</li>
         <li><b>TRANSACTION_IN_THE_BLOCK</b> - Enable HTTP POST JSON notifications on ledger => blockchain transaction, when transaction is included in the block.
         This web hook will be invoked, when the outgoing transaction is included in the block.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>
+        <pre><code>
           {
             "txId": "0x026f4f05b972c09279111da13dfd20d8df04eff436d7f604cd97b9ffaa690567",
             "reference": "90270634-5b07-4fad-b17b-f82899953533",
@@ -218,23 +218,23 @@ paths:
             "address": "0x8ce4e40889a13971681391AAd29E88eFAF91f784",
             "amount": "0.1",
             "blockHeight": 8517664
-          }</pre>
+          }</code></pre>
         10 credits will be debited every day, 1 credit for every included transaction notified via web hook.</li>
         <li><b>KMS_FAILED_TX</b> - Enable HTTP POST JSON notifications on error during KMS signature process.
         This web hook will be invoked, when the Tatum KMS receives error during processing transactions.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <pre><code>{
           "signatureId": "6082ab462936b4478117c6a0",
           "error": "Error message from the KMS"
-        }</pre>
+        }</code></pre>
         10 credits will be debited every day.</li>
         <li><b>KMS_COMPLETED_TX</b> - Enable HTTP POST JSON notifications on successful completion of KMS signature process.
         This web hook will be invoked, when the Tatum KMS sudessfully completes the signature during processing transactions.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <pre><code>{
           "signatureId": "6082ab462936b4478117c6a0",
           "txId": "0x7bb7d3b90567e89f999f2e3d263bc3738a018dbbcfa9f5397678cf17cdf0235f"
-        }</pre>
+        }</code></pre>
         10 credits will be debited every day.</li>
         <li><b>OFFCHAIN_WITHDRAWAL</b> - Off-chain scanning of outgoing transactions for BTC, BCH, LTC, DOGE and ETH blockchains - by default addresses in registered for off-chain
         scanning are synchronized only against incoming transactions. By enabling this feature, off-chain accounts with connected blockchain addresses
