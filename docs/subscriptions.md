@@ -34,6 +34,7 @@ Blockchain | Asset support | Credit consumption
 ---------|----------|---------
 **Bitcoin** | BTC | 20 credits / day / address
 **Bitcoin Cash** | BCH, only incoming transactions | 20 credits / day / address
+**Binance Smart Chain** | BSC,BEP20,ERC721,ERC1155 | 40 credits / day / address
 **Celo** | CELO, Internal transfers, ERC20, ERC721, ERC1155 | 25 credits / day / address
 **Dogecoin** | DOGE, only incoming transactions | 20 credits / day / address
 **Ethereum** | ETH, Internal transfers, ERC20, ERC721, ERC1155 | 25 credits / day / address
