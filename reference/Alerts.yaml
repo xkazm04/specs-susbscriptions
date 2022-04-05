@@ -122,7 +122,7 @@ paths:
           </tr>
         </table>
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <code>{
           "address": "FykfMwA9WNShzPJbbb9DNXsfgDgS3XZzWiFgrVXfWoPJ", // address on which the transaction occurs. For EVM chains, this is recipient address
           "txId": "2rdy3YCZHSwvpWtuDom1d4Jjy5UU9STLxF3ffXau6GToReDkfw8wEgX541fvzvh6btVC5D8iNapcKTXfPsoDBk7A", // transaction id
           "blockNumber": 110827114, // block number
@@ -131,13 +131,13 @@ paths:
           "tokenId": "1", // ID of the transferred token, if it is ERC721 / ERC1155
           "type": "token", // type of transaction, could be 'native' or 'token'
           "counterAddress": undefined // optional counter party address of the transaction. For EVM chains, this is recipient address
-        }</pre>
+        }</code>
         5 credits will be debited for every fired webhook.<br/></li>
         <li><b>ACCOUNT_INCOMING_BLOCKCHAIN_TRANSACTION</b> - Enable HTTP POST JSON notifications on incoming blockchain transactions on virtual accounts.
         This web hook will be invoked, when the transaction is credited to the virtual account. Transaction is credited, when it has sufficient amount of blockchain confirmations.
         For BTC, LTC, BCH, DOGE - 2 confirmations, others - 1 confirmation.
         Request body of the POST request will be JSON object with attributes:<br/>
-        <pre>{
+        <code>{
           "date": 1619176527481,
           "amount": "0.005",
           "currency": "BTC",
@@ -149,7 +149,7 @@ paths:
           "from": "SENDER_ADDRESS", // might not ebe present all the time, for UTXO based blockchains it's not there
           "to": "RECIPIENT_ADDRESS_CONNECTED_TO_LEDGER_ACCOUNT", // blockchain address of the recipient
           "index": 5 // for UTXO based chains (BTC,LTC,DOGE,BCH,ADA) this is the index of the output in the transaction
-        }</pre>
+        }</code>
         1 credit will be debited for every monitored account every day.</li>
         <li><b>ACCOUNT_PENDING_BLOCKCHAIN_TRANSACTION</b> - Enable HTTP POST JSON notifications on incoming blockchain transactions on virtual accounts.
         This web hook will be invoked, when the transaction appears for the first time in the block - it has 1 confirmation, but is still not credited to the ledger account, because it does not have enough confirmations.
